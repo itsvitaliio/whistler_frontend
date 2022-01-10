@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { logoutUser } from './auth';
+require('dotenv').config()
 
-export const API_BASE_URL = '/api/';
+const path = (process.env.NODE_ENV==='development') ? 'http://localhost:3001' : '';
+export const API_BASE_URL = path +'/api/';
 
 axios.defaults.baseURL = API_BASE_URL;
 
