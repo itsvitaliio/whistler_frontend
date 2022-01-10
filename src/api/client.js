@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { logoutUser } from './auth';
-require('dotenv').config()
 
 export const API_BASE_URL = '/api/';
 
